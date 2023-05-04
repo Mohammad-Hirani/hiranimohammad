@@ -246,12 +246,41 @@ section.about {
 .title {
     text-align: center;
     text-transform: uppercase;
-    font-size: 60px;
+}
+
+.title h1 {
+    font-size: 100px;
     font-family: 'poppins', sans-serif;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #292929;
     letter-spacing: 20px;
     opacity: 0.2;
+    margin-bottom: -40px;
+}
+
+.title h2 {
+    font-family: 'Inter' sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #292929;
+    letter-spacing: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h2::before {
+    content: '';
+    width: 40px;
+    height: 4px;
+    background: #ea4020;
+}
+
+.title h2::after {
+    content: '';
+    width: 40px;
+    height: 4px;
+    background: #ea4020;
 }
 
 .about-img img {
@@ -347,60 +376,161 @@ span.border-btm {
     padding-top: 40px;
 }
 
-/* 
+/* Services */
 
-
-.title h1 {
-    font-size: 80px;
-    font-family: 'Courier New', Courier, monospace;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #292929;
-    letter-spacing: 20px;
-    opacity: 0.2;
-    margin-bottom: 10px;
+.service-box-item {
+    width: 350px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 40px;
+    border-color: #e2e8f0;
+    box-shadow: 0 6px 24px 0 rgba(140, 152, 164, 0.125);
+    margin-bottom: 70px;
+    transition: .3s;
 }
 
-.title h2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    color: #292929;
-    letter-spacing: 5px;
+.box-icon i {
+    font-size: 55px;
+    color: #ffffff;
+}
+
+.box-icon::before {
+    content: '';
+    border: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ea4020;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.box-icon::after {
+    content: '';
+    border: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ea4020;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.box-icon {
+    position: relative;
+    width: 100px;
+    height: 63px;
     display: flex;
+    margin: 0 auto 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    z-index: 100;
+    background: #ea4020;
+    top: -55px;
+    transition: .3s;
+}
+
+.service-box-details {
+    margin-top: -30px;
+}
+
+h5.service-title {
+    font-size: 18px;
+    color: #292929;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.service-box-details p {
+    line-height: 25px;
+    color: #292929;
+}
+
+.service-box {
+    flex-wrap: wrap;
+}
+
+.padd-btm-100 {
+    padding-bottom: 100px;
+}
+
+.service-box-item:hover {
+    border-color: #ea4020;
+}
+
+.service-box-item:hover .box-icon {
+    top: -50px;
+}
+
+h1.m-0 {
+    margin: 0;
+}
+
+/* Experience */
+
+.experience {
+    background: #f7f6ff;
+}
+
+ul.experience-box {
+    flex-direction: column;
     justify-content: center;
 }
 
-.title h2::before {
-    content: '';
-    width: 40px;
-    height: 4px;
+ul.experience-box li {
+    width: 1000px;
+    border: 1px solid;
+    border-color: #e2e8f0;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    align-items: flex-start;
+    box-shadow: 0px 6px 24px 0px rgba(140, 152, 164, 0.125);
+    background: #ffffff;
+    transition: .4s;
+}
+
+.ex-date {
     background: #ea4020;
-
+    padding: 10px 15px;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 40px;
 }
 
-.title h2::after {
-    content: '';
-    width: 40px;
-    height: 4px;
-    background: #ea4020;
-
+.ex-detail {
+    width: 700px;
+    color: #555a64;
+    font-size: 15px;
 }
 
-span.content-title::before {
-    content: '';
-    width: 3px;
-    height: 20px;
-    background: #ea4020;
-    margin-right: 15px;
+h4.ex-title {
+    font-size: 17px;
+    color: #292929;
+    font-weight: 600;
 }
 
-.about-content {
-    width: 600px;
+.ex-detail p {
+    padding: 10px 0px;
+    line-height: 28px;
 }
 
-
-
-.content-items ul {
-    flex-wrap: wrap;
+.ex-detail span {
+    font-size: 14px;
 }
- */
+
+ul.experience-box li:hover {
+    border-color: #ea4020;
+}
